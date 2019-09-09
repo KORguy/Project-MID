@@ -14,6 +14,12 @@
 * Native 락 시스템 (핸드폰 지문이나 얼굴인식으로 어플 언락- 핸드폰 주인만 access 가능)
 * 휴대폰 분실가능성에 대비해 원격 데이터 폐기</code></pre>
 
-## II. 디자인
+## III. 디자인
 <pre><code>- 로고
 - 레이아웃 </pre></code> 
+
+## IIII. 보안
+<pre><code>- Client Side Encryption
+- SSL (무료, LetsEncrypt)
+- Oauth 2.0
+- DDNS, Dedicated IP  도메인 필요.
