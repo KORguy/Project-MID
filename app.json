@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "MID",
-    "slug": "MID",
+    "name": "Mobile ID",
+    "slug": "Mobile_ID_Expo",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.MID.MID"
+    },
+    "android": {
+      "package":"com.MID.MID"
     }
   }
 }

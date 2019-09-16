@@ -1,12 +1,30 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import React, {Component} from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import cameraScreen from './src/cameraScreen';
+import rHomeScreen from './src/rHomeScreen';
+import urHomeScreen from './src/urHomeScreen';
+import PreviewScan from './src/PreviewScan';
+import alertPage from './src/alertPage';
 
-export default class HelloWorldApp extends Component {
+const AppNavigator = createStackNavigator (
+  {
+    urHome: urHomeScreen,
+    rHome: rHomeScreen,
+    cam: cameraScreen,
+    preview: PreviewScan,
+    alert: alertPage,
+  },
+  {
+    initialRouteName: 'urHome',
+    headerMode: 'none',
+  }
+)
+
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends Component {
   render() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, world!</Text>
-      </View>
-    );
+    return <AppContainer />;
   }
 }
