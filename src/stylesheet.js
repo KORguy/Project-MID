@@ -1,5 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
+let screenheight = Dimensions.get("screen").height;
+let screenwidth = Dimensions.get("screen").width;
 
 export default StyleSheet.create({
     mainContainer:{
@@ -19,5 +21,28 @@ export default StyleSheet.create({
       paddingRight: '15%',
       letterSpacing: 2,
       lineHeight: 30
+    },
+    alertImg: {
+      alignSelf:'center',
+      width: 0.8 * screenwidth,
+      height: 0.5 * screenwidth
+    },
+    inputbox: {
+      width: "60%",
+      height: "12%",
+      borderColor: 'steelblue',
+      borderWidth: 10,
+      borderRadius: 10,
+      marginVertical: 10,
+      textAlign: 'center'
+    },
+    xinputbox: {
+      width: "60%",
+      height: "12%",
+      borderColor: 'red',
+      borderWidth: 10,
+      borderRadius: 10,
+      marginVertical: 10,
+      textAlign: 'center'
     },
   });
