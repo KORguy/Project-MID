@@ -1,10 +1,10 @@
-import {View, ImageBackground, Image, Dimensions } from 'react-native';
+import {View, ImageBackground, Image, Dimensions, Platform } from 'react-native';
 import { Button } from 'react-native-elements';
 import React, {Component} from 'react';
 
 
 export default class PreviewScan extends Component {
-  
+
     state = {
         data: this.props.navigation.getParam('data'),
         windowheight: Dimensions.get('window').height,
@@ -12,9 +12,8 @@ export default class PreviewScan extends Component {
         name: this.props.navigation.getParam('name'),
         birth: this.props.navigation.getParam('birth')
     };
-    
+
     render(){
-        console.log(this.state.data, this.state.name, this.state.birth);
         return (
             <View style={{flex:1, backgroundColor: 'ivory'}}>
                 <View style={{ flex:9, justifyContent:'center', alignContent:'center', alignSelf:'center' }}>

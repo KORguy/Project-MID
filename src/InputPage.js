@@ -18,7 +18,7 @@ export default class InputPage extends Component {
             name: text
         });
         if (text.length < 2 ){
-            this.setState({incorrect_name:true});
+            this.setState({incorrect_name: true});
             this.setState({correct:false});
 
         } else if (text.length > 1){
@@ -36,13 +36,13 @@ export default class InputPage extends Component {
         if (text.length==6){
             if ((Number(text.slice(2,4)) < 13) && (Number(text.slice(-2,-1)) < 32)){
                 this.setState({incorrect_birth: false});
-                this.setState({correct:true});
+                if (!this.state.incorrect_name){
+                    this.setState({correct:true});
+                };
             }
         } else {
             this.setState({incorrect_birth: true});
-            if (!this.state.incorrect_name){
-                this.setState({correct:false});
-            }
+            this.setState({correct:false});
         };
     }
 

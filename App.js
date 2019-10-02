@@ -6,6 +6,8 @@ import HomeScreen from "./src/HomeScreen";
 import PreviewScan from './src/PreviewScan';
 import alertPage from './src/alertPage';
 import InputPage from './src/InputPage';
+import confirmPage from './src/confirmPage';
+import additionalPage from './src/additionalPage.js';
 
 const AppNavigator = createStackNavigator (
   {
@@ -13,7 +15,9 @@ const AppNavigator = createStackNavigator (
     cam: cameraScreen,
     preview: PreviewScan,
     alert: alertPage,
-    datainput: InputPage
+    datainput: InputPage,
+    confirm: confirmPage,
+    additional: additionalPage,
   },
   {
     initialRouteName: 'Home',
